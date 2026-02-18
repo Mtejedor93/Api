@@ -1,6 +1,9 @@
 export default function handler(req, res) {
-  res.status(200).json([
+  res.status(200).json(
     {
+      total:30,
+      data:[
+       {
       "id": 1,
       "name": "Alejandro Ramírez gonzález",
       "nit": "901567916",
@@ -1046,5 +1049,7 @@ export default function handler(req, res) {
         }
       ]
     }
-  ]);
+  ]
+    }
+  );
 }
