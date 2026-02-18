@@ -2,6 +2,9 @@ export default function handler(req, res) {
   res.status(200).json(
     {
       total:30,
+      limit:10,
+      offset:0,
+      results:10,
       data:[
        {
       "id": 1,
