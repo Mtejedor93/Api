@@ -1,4 +1,14 @@
 export default function handler(req, res) {
+    // Configurar encabezados CORS
+  res.setHeader('Access-Control-Allow-Origin', '*'); // o tu dominio específico
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+
+  // Manejar preflight request (OPTIONS)
+  if (req.method === 'OPTIONS') {
+    res.status(200).end();
+    return;
+  }
   res.status(200).json(
     {
       total:30,
